@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Poppins:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #b3e5fc, #ce93d8, #f8bbd0, #90caf9);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.center {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 1s ease;
+}
+
+/* Heading */
+.center h1 {
+  text-align: center;
+  color: #6a1b9a;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.center form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input */
+.txt_field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 16px 14px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: 0.3s;
+}
+
+.txt_field input:focus {
+  border-color: #ab47bc;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(171, 71, 188, 0.25);
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+  background: white;
+  padding: 0 5px;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #ab47bc;
+}
+
+/* Forgot Password */
+.pass {
+  text-align: right;
+  font-size: 14px;
+  color: #6a1b9a;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: -8px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.pass:hover {
+  text-decoration: underline;
+  color: #4a148c;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background: linear-gradient(to right, #ab47bc, #64b5f6);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(171, 71, 188, 0.3);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(to right, #8e24aa, #42a5f5);
+  box-shadow: 0 8px 25px rgba(171, 71, 188, 0.4);
+}
+
+/* Signup Link */
+.signup_link {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup_link a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup_link a:hover {
+  text-decoration: underline;
+}
